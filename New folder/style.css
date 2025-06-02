@@ -1,0 +1,164 @@
+body{
+    background-color: black;
+ /*   background-image: url(bgp.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; *//* remove these two sets to bring the picture out.*/
+
+}
+h1{
+    color: rgb(21, 161, 68);
+    font-family: verdana;
+    text-align: center;
+    text-decoration: none;
+}
+h1 a, h2 a, h3 a, h5 a {
+    color: rgb(21, 161, 68);
+    text-decoration: none; /* optional: remove underline */
+}
+
+h2{
+    color: rgb(21, 161, 68);
+    font-family: verdana;
+    text-align: center;
+    text-decoration: none;
+}
+h3{
+    color: rgb(21, 161, 68);
+    font-family: verdana;
+    text-align: center;
+    text-decoration: none;
+}
+
+h5{
+    color: rgb(21, 161, 68);
+    font-family: verdana;
+    text-decoration: none;
+}
+p{
+    color: rgb(21, 161, 68);
+    font-family: verdana;
+    text-align: center;
+    margin: 0 auto; 
+    text-decoration: none;
+}
+
+
+/* Centering the image inside the anchor tag */
+a {
+    /*blocked this to see if it fixes a problem display: block; /* This makes the anchor a block element, which can be centered */ 
+    text-align: center; /* Centering the content inside the <a> tag */
+    margin: 0 auto; /* This ensures the block element is centered */
+    text-decoration: none;
+}
+.inline-links a {
+    display: inline;           /* Keep them on the same line */
+    margin-right: 15px;        /* Add spacing */
+    text-decoration: none;     /* Optional: cleaner look */
+    color: rgb(121, 38, 144);          /* Optional: to make it stand out */
+    text-decoration: none;
+}
+a:link
+a:visited {
+    color: rgb(121, 38, 144);
+    text-decoration: none;
+
+}
+a:hover{
+    font-size: 1.2em;
+    animation-name: glow;
+    animation-duration: 2s;
+}
+/*@keyframes glow{
+    50%{box-shadow: 0px 0px 50px yellow;}
+}*//* this is nice but It would need a lot of work to make it fit and not look bad.*/
+
+*::selection{
+    color: red;
+
+}
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: green;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: gray;
+    border-radius: 5px;
+}
+.navbar ul{
+    list-style-type: none;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    background-color: aqua;
+    
+}
+.navbar a{
+    color: green;
+    text-align: center;
+    padding: 15px;
+}
+.gallery {
+    height: 250px;
+    margin: 0 auto;
+}
+.res {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    margin: 2rem 0;
+}
+
+.res img {
+    max-height: 100%;
+    height: auto;
+}
+
+.gallery img{
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.icons{
+
+}
+.fa-brands.fa-youtube.fa-2x{
+    color: red;
+}
+
+.fa-brands.fa-linkedin.fa-2x{
+    color:blue;
+}
+
+.slide{
+animation-name: slideLeft;
+animation-duration: 10s;
+}
+@keyframes slideLeft{
+    from{
+        transform: translateX(-80%);
+    }   
+    to {
+        transform: translate(0);
+    }
+}
+.backlink {
+    margin-top: 10px;
+    text-align: left;
+}
+.backlink a {
+    font-weight: bold;
+    text-decoration: none;
+    color: green;
+}

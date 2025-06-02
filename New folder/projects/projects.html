@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/jpeg" href="../images/cat.jpeg">
+    <title> B.Scates</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home </a></li>
+            <li><a href="../resume/resume.html"> Resume </a></li>
+            <li><a href="">Projects </a></li>
+            <li><a href="../test.html">Email me </a></li>
+            <li><a href="../about/about.html">About </a></li>
+            <li><a href="../goals/goals.html">Goals</a></li>
+            <li><a href="../notes/notes.html">Notes</a></li>
+        </ul>
+
+    </nav>
+    <h3>A few years back I started playing Minecraft with my wife. It was fun, and we both enjoyed it. As I got deeper in my schoolwork
+         I had less and less time to play games, so I quit paying for my subscription. It was not much for it. I just didn’t have the time.
+          About a year after quitting, I learned that I could make my own server and not have to pay anyone for it. So, I did just that now
+           whenever we want we can hope on and play. I have been working on adding mods to it as a fun little side project, but I have not
+            successfully done it yet. At some point though I will have it so it will run with mods. I decided to add this little thing that
+             shows when my server for my game is on.</h3>
+    <!-- 🎮 Minecraft Server Status -->
+    <div id="mc-status" style="margin: 20px; font-size: 18px; color:antiquewhite;">Checking server status...</div>
+
+    <!-- 👇 Paste the script here -->
+    <script>
+        const serverIP = "play.example.com"; 
+        // ← Replace this with your server's IP or domain
+        const statusDiv = document.getElementById("mc-status");
+
+        fetch(`https://api.mcsrvstat.us/2/${serverIP}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.online) {
+                    statusDiv.innerHTML = `
+                        🟢 <strong>Server is Online</strong><br>
+                        Players: ${data.players.online}/${data.players.max}
+                    `;
+                } else {
+                    statusDiv.innerHTML = `🔴 <strong>Server is Offline</strong>`;
+                }
+            })
+            .catch(err => {
+                statusDiv.innerHTML = "⚠️ Error checking server status.";
+                console.error("Status check failed:", err);
+            });
+    </script>
+    <h3>At some point I want to make a little sensor that shows how much water is in the soil of my tree that I own. I have not gotten
+         around to it but I will put it here when done.</h3>
+         <div class="gallery">
+         <img src="momi.jpg"></div><br>
+    <h3>A project that has come to my mind in the past few months is that I want to make my own streaming server. I own a lot of shows
+        and I think the idea of having them all on a harddrive that I can access when I want would be a fun thing to work on.
+        It also helps they are shows that I like to watch.</h3>
+        <div class="gallery">
+        <img src="momi.jpg"></div><br>
+    <h3>Someone like the video server I have many D&D books that I want to make digital copies of so I can do the same thing with them</h3>
+        <div class="gallery">
+        <img src="momi.jpg"></div><br>
+       <h3>The last project and the one that means the most to me is I would like to make a video game on my own from scratch. I have
+        played games all my life and for years it has been a dream to make one.</h3>
+        <div class="gallery">
+        <img src="momi.jpg"></div><br> 
+    <h3>I want to make a VM</h3>
+</body>
+        <div class="backlink">
+            <a href="../index.html">← Back to Home</a>
+        </div>
